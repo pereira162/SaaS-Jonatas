@@ -1,157 +1,25 @@
-# SaaS Jonatas
+# SaaS Jonatas - Plataforma para Restaurantes com Delivery> 🍕 **Plataforma completa para gestão de restaurantes brasileiros com delivery próprio**[![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)](https://github.io)[![Version](https://img.shields.io/badge/Version-2.0-blue)](https://github.io)[![Next.js](https://img.shields.io/badge/Next.js-14+-black)](https://nextjs.org/)[![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-green)](https://supabase.com/)## 📋 Sobre o ProjetoO **SaaS Jonatas** é uma plataforma SaaS robusta desenvolvida especificamente para o mercado brasileiro de restaurantes. Combina gestão completa de restaurantes com sistema de delivery próprio, integrações nativas com WhatsApp, impressoras térmicas e meios de pagamento brasileiros.### 🎯 Objetivos Principais- Sistema completo de gestão para restaurantes- Delivery próprio com tracking em tempo real  - Integração nativa com WhatsApp para pedidos- Suporte a impressoras térmicas brasileiras- Compliance total com regulamentações brasileiras- Interface otimizada para mobile-first## 🛠️ Stack Tecnológica### Frontend- **Framework:** Next.js 14+ (App Router)- **UI Library:** Material UI (MUI) v5+- **State Management:** React Context API + React Query v5- **Styling:** MUI System + CSS-in-JS + Responsive design- **Forms:** React Hook Form + Zod validation- **Authentication:** Supabase Auth### Backend- **Database:** Supabase PostgreSQL- **Auth:** Supabase Auth- **Storage:** Supabase Storage  - **Realtime:** Supabase Realtime- **API:** Next.js API Routes- **Validation:** Zod para schemas### Integrações- **Pagamentos:** Stripe (Brasil compliance)- **WhatsApp:** WPPConnect ou Z-API- **Impressão:** Escpos.js + Node.js API- **Mapas:** Google Maps API + Directions API- **Email:** Resend via Supabase## 🚀 Início Rápido### Pré-requisitos- Node.js 18+- Docker Desktop- Git### Instalação```bash# Clone o repositóriogit clone [URL_DO_REPOSITORIO]cd SaaS-Jonatas# Instale as dependênciasnpm install# Configure o ambientecp .env.example .env.local# Inicie o Supabase localnpm run supabase:start# Inicie o servidor de desenvolvimentonpm run dev```### Scripts Disponíveis```bash# Desenvolvimentonpm run dev          # Inicia Next.js em modo devnpm run build        # Build de produçãonpm run start        # Inicia servidor de produção# Supabase Localnpm run supabase:start   # Inicia ambiente Supabase localnpm run supabase:stop    # Para ambiente Supabase localnpm run supabase:status  # Status do ambiente localnpm run supabase:studio  # Abre Supabase Studio# Qualidade de Códigonpm run lint         # ESLintnpm run test         # Jest + Testing Librarynpm run test:e2e     # Playwright E2E```## 📁 Estrutura do Projeto```saas-jonatas/├── .env.local                 # Variáveis de ambiente local├── .env.example              # Template de variáveis├── next.config.js            # Configuração Next.js├── tailwind.config.js        # Configuração Tailwind├── package.json              # Dependências e scripts├── README.md                 # Este arquivo│├── src/│   ├── app/                  # App Router (Next.js 14+)│   │   ├── globals.css       # Estilos globais│   │   ├── layout.tsx        # Layout raiz│   │   └── page.tsx          # Página inicial│   ││   └── lib/│       └── supabase.ts       # Cliente Supabase│├── types/│   └── supabase.ts           # Tipos TypeScript do Supabase│├── supabase/│   ├── config.toml           # Configuração Supabase│   └── migrations/           # Migrações do banco│└── scripts/                  # Scripts de automação    ├── setup.ps1             # Setup Windows (PowerShell)    └── setup.sh              # Setup Linux/Mac (Bash)```## 📚 Status de Desenvolvimento### ✅ Concluído- [x] Estrutura inicial do projeto- [x] Configuração Next.js 14 + App Router- [x] Integração Supabase- [x] Documentação v2.0 completa- [x] Limpeza de arquivos de teste- [x] Configuração TypeScript- [x] Setup de desenvolvimento local### 🚧 Em Desenvolvimento- [ ] Configuração Material UI- [ ] Sistema de autenticação- [ ] Estrutura do banco de dados- [ ] Páginas principais da aplicação- [ ] Componentes base UI### 📋 Planejado- [ ] Sistema de pedidos- [ ] Integração WhatsApp- [ ] Sistema de pagamentos- [ ] Dashboard administrativo- [ ] App mobile (React Native)- [ ] Sistema de delivery- [ ] Relatórios e analytics## 📖 DocumentaçãoA documentação completa está disponível na pasta raiz:- `descricao-detalhada-projeto_Version2.md` - Visão geral do projeto- `PRD-SaaS-Jonatas_Version2.md` - Product Requirements Document- `Instrucoes-AI-Desenvolvimento-SaaS-Parte1_Version2.md` - Instruções de desenvolvimento Parte 1
+- `Instrucoes-AI-Desenvolvimento-SaaS-Parte2_Version2.md` - Instruções de desenvolvimento Parte 2  
+- `Instrucoes-AI-Desenvolvimento-SaaS-Parte3_Version2.md` - Instruções de desenvolvimento Parte 3
+- `Prompt-Mapeamento-Completo-Paginas-Componentes_Version2.md` - Mapeamento de páginas e componentes
 
-Plataforma SaaS desenvolvida com Next.js, TypeScript, Tailwind CSS e Supabase.
+## 🤝 Contribuição
 
-## 🚀 Configuração do Ambiente de Desenvolvimento
+Este projeto segue diretrizes rigorosas de desenvolvimento definidas na documentação v2.0. Antes de contribuir:
 
-### Pré-requisitos
+1. Leia toda a documentação na pasta raiz
+2. Siga os padrões de código estabelecidos
+3. Garanta 80%+ de cobertura de testes
+4. Use commits semânticos
+5. Siga as práticas de segurança definidas
 
-- Node.js 18+ 
-- Docker Desktop
-- Git
-- VS Code (recomendado)
+## 📄 Licença
 
-### Configuração Inicial
+Este projeto está sob a licença especificada no arquivo `LICENSE`.
 
-1. **Clone o repositório**
-```bash
-git clone https://github.com/pereira162/SaaS-Jonatas.git
-cd SaaS-Jonatas
-```
+---
 
-2. **Instale as dependências**
-```bash
-npm install
-```
+**Desenvolvido com ❤️ para o mercado brasileiro de restaurantes**
 
-3. **Configure o Supabase Local**
-```bash
-# Inicialize o Supabase (se não foi feito)
-npx supabase init
-
-# Inicie o ambiente local
-npx supabase start
-```
-
-4. **Configure as variáveis de ambiente**
-```bash
-# Copie o arquivo de exemplo
-cp .env.local.example .env.local
-
-# As variáveis já estão configuradas para desenvolvimento local
-```
-
-### 🔧 Scripts Disponíveis
-
-#### Next.js
-- `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Build para produção
-- `npm run start` - Inicia servidor de produção
-- `npm run lint` - Executa ESLint
-
-#### Supabase
-- `npm run supabase:start` - Inicia Supabase local
-- `npm run supabase:stop` - Para Supabase local
-- `npm run supabase:status` - Status dos serviços
-- `npm run supabase:studio` - Abre Supabase Studio
-- `npm run supabase:reset` - Reset do banco local
-
-#### Banco de Dados
-- `npm run db:migrate` - Aplica migrações
-- `npm run db:reset` - Reset do banco
-- `npm run type-gen` - Gera tipos TypeScript do banco
-
-### 🌐 URLs de Desenvolvimento
-
-Quando o Supabase local está rodando:
-
-- **Next.js App**: http://localhost:3000
-- **Supabase API**: http://127.0.0.1:54321
-- **Supabase Studio**: http://127.0.0.1:54323
-- **Mailpit (Email)**: http://127.0.0.1:54324
-- **Database**: postgresql://postgres:postgres@127.0.0.1:54322/postgres
-
-### 📁 Estrutura do Projeto
-
-```
-SaaS-Jonatas/
-├── src/
-│   ├── app/              # App Router (Next.js 13+)
-│   │   ├── globals.css   # Estilos globais
-│   │   ├── layout.tsx    # Layout principal
-│   │   └── page.tsx      # Página inicial
-│   ├── components/       # Componentes React
-│   ├── lib/             # Bibliotecas e utilitários
-│   │   └── supabase.ts  # Cliente Supabase
-│   └── utils/           # Funções utilitárias
-├── supabase/            # Configurações Supabase
-│   ├── config.toml      # Configurações locais
-│   └── migrations/      # Migrações do banco
-├── types/               # Tipos TypeScript
-│   └── supabase.ts      # Tipos do banco
-├── .vscode/
-│   ├── settings.json    # Configurações VS Code
-│   └── mcp.json         # Configuração MCP
-├── .env.local           # Variáveis de ambiente local
-└── package.json
-```
-
-### 🛠️ Tecnologias
-
-- **Frontend**: Next.js 14, React 18, TypeScript
-- **Styling**: Tailwind CSS
-- **Backend**: Supabase (PostgreSQL, Auth, Storage)
-- **Development**: Docker, Supabase CLI
-
-### 📝 Desenvolvimento
-
-1. **Inicie o ambiente**
-```bash
-npm run supabase:start
-npm run dev
-```
-
-2. **Acesse a aplicação**
-- App: http://localhost:3000
-- Studio: http://127.0.0.1:54323
-
-3. **Para parar os serviços**
-```bash
-npm run supabase:stop
-```
-
-### 🔍 Model Context Protocol (MCP)
-
-O projeto inclui configuração MCP para integração com VS Code:
-
-- **Supabase Local**: Acesso ao banco local
-- **Postgres**: Conexão direta ao PostgreSQL
-- **Filesystem**: Acesso aos arquivos do projeto
-
-### 📚 Recursos Úteis
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Supabase Documentation](https://supabase.com/docs)
-- [Tailwind CSS](https://tailwindcss.com/docs)
-- [TypeScript](https://www.typescriptlang.org/docs/)
-
-### 🐛 Troubleshooting
-
-**Problema**: Docker não está rodando
-```bash
-# Verifique se o Docker Desktop está iniciado
-docker ps
-```
-
-**Problema**: Supabase não conecta
-```bash
-# Reset do ambiente local
-npm run supabase:stop
-npm run supabase:start
-```
-
-**Problema**: Erro de tipos TypeScript
-```bash
-# Regenere os tipos do Supabase
-npm run type-gen
-```
+> 🚧 **Status:** Projeto em desenvolvimento ativo seguindo instruções v2.0  
+> 📅 **Última atualização:** Junho 2025
