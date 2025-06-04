@@ -9,34 +9,8 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
-      // Adicione suas tabelas aqui conforme forem criadas
-      profiles: {
-        Row: {
-          id: string
-          created_at: string
-          updated_at: string
-          email: string
-          full_name: string | null
-          avatar_url: string | null
-        }
-        Insert: {
-          id: string
-          created_at?: string
-          updated_at?: string
-          email: string
-          full_name?: string | null
-          avatar_url?: string | null
-        }
-        Update: {
-          id?: string
-          created_at?: string
-          updated_at?: string
-          email?: string
-          full_name?: string | null
-          avatar_url?: string | null
-        }
-        Relationships: []
-      }
+      // Tabelas serão adicionadas conforme o desenvolvimento do projeto
+      // seguindo as instruções da versão 2.0
     }
     Views: {
       [_ in never]: never
